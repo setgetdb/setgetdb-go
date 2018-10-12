@@ -1,7 +1,7 @@
+<img src="./logo.png" width="600" />
+
 # SetGetDB
 A persistent key-value db for educational purposes only.
-
-<img src="./logo.png" width="600" />
 
 ## How to build
 ```sh
