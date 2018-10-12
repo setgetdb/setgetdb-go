@@ -12,13 +12,13 @@ const WORLD = "WORLD"
 func BenchmarkSetDifferentValues(b *testing.B) {
 	db := setget.NewDatabase(TEST)
 	for n := 0; n < b.N; n++ {
-		db.SetByKey(HELLO, WORLD+string(n))
+		db.Set(HELLO, WORLD+string(n))
 	}
 }
 
 func BenchmarkSetDifferentKeys(b *testing.B) {
 	db := setget.NewDatabase(TEST)
 	for n := 0; n < b.N; n++ {
-		db.SetByKey(HELLO+string(n), WORLD)
+		db.Set(HELLO+string(n), WORLD)
 	}
 }

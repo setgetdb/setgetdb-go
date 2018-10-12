@@ -3,15 +3,25 @@ A persistent key-value db for educational purposes Only.
 
 ## How to use
 ```go
+package main
+
+import (
+	"fmt"
+	"github.com/setget/setget/src"
+)
+
 const TEST = "TEST"
 const HELLO = "HELLO"
 const WORLD = "WORLD"
 
-db := setget.NewDatabase(TEST)
-db.SetByKey(HELLO, WORLD)
-value := db.GetValueByKey(HELLO)
-fmt.Println(value)
-db.DeleteByKey(HELLO)
+func main()  {
+    db := setget.NewDatabase(TEST)
+    db.Set(HELLO, WORLD)
+    _, value := db.Get(HELLO)
+    fmt.Println(value)
+    db.Delete(HELLO)
+    db.Close()
+}
 ```
 
 ## Benchmark

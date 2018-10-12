@@ -19,20 +19,20 @@ func NewDatabase(dbName string) *Database {
 	return &Database{dbName, fileManager}
 }
 
-func (d *Database) GetValue(key string) (error, string)  {
+func (d *Database) Get(key string) (error, string)  {
 	from, to := d.getRangeBufferByKey(key)
 	err, buffer := d.fileManager.Read(from, to)
 	return err, string(buffer)
 }
 
-func (d *Database) SetByKey(key string, value string) error {
+func (d *Database) Set(key string, value string) error {
 	from, _ := d.getRangeBufferByKey(key)
 	buffer := make([]byte, SizeRecord)
 	copy(buffer, []byte(value))
 	return d.fileManager.Write(from, buffer)
 }
 
-func (d *Database) DeleteByKey(key string) error {
+func (d *Database) Delete(key string) error {
 	from, to := d.getRangeBufferByKey(key)
 	return d.fileManager.Delete(from, to)
 }
