@@ -1,7 +1,7 @@
 # SetGetDB
 A persistent key-value db for educational purposes only.
 
-![SetGetDB](./logo.png | width=600)
+<img src="./logo.png" width="600" />
 
 ## How to build
 ```sh
