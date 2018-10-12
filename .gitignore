@@ -1,4 +1,6 @@
 .DS_Store
+DATABASE
 TEST
 vendor
 .idea
+server

@@ -1,4 +1,4 @@
-package setget
+package setgetdb
 
 import (
 	"os"

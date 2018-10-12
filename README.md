@@ -1,27 +1,31 @@
 # SetGetDB
 A persistent key-value db for educational purposes Only.
 
+## How to build
+```sh
+$ make build
+```
+
+## How to run
+```sh
+$ docker run -d -p 10101:10101 setgetdb/setgetdb
+```
+
 ## How to use
-```go
-package main
 
-import (
-	"fmt"
-	"github.com/setget/setget/src"
-)
+### Set a value
+```sh
+$ curl -X POST --data '{ "key": "hello", "value": "world" }' http://localhost:10101/set
+```
 
-const TEST = "TEST"
-const HELLO = "HELLO"
-const WORLD = "WORLD"
+### Retrieve a value
+```sh
+$ curl -X POST --data '{ "key": "hello" }' http://localhost:10101/get
+```
 
-func main()  {
-    db := setget.NewDatabase(TEST)
-    db.Set(HELLO, WORLD)
-    _, value := db.Get(HELLO)
-    fmt.Println(value)
-    db.Delete(HELLO)
-    db.Close()
-}
+### Delete a value
+```sh
+$ curl -X POST --data '{ "key": "hello" }' http://localhost:10101/delete
 ```
 
 ## Benchmark
@@ -47,5 +51,5 @@ Process finished with exit code 0
 - [X] Set operation
 - [X] Get operation
 - [X] Delete operation
+- [X] Server
 - [ ] Thread-safe
-- [ ] Server

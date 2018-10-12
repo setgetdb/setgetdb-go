@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/setget/setget/src"
+	. "github.com/setgetdb/setgetdb/setgetdb"
 	"testing"
 )
 
@@ -10,14 +10,14 @@ const HELLO = "HELLO"
 const WORLD = "WORLD"
 
 func BenchmarkSetDifferentValues(b *testing.B) {
-	db := setget.NewDatabase(TEST)
+	db := NewDatabase(TEST)
 	for n := 0; n < b.N; n++ {
 		db.Set(HELLO, WORLD+string(n))
 	}
 }
 
 func BenchmarkSetDifferentKeys(b *testing.B) {
-	db := setget.NewDatabase(TEST)
+	db := NewDatabase(TEST)
 	for n := 0; n < b.N; n++ {
 		db.Set(HELLO+string(n), WORLD)
 	}

@@ -1,6 +1,7 @@
-package setget
+package setgetdb
 
 import (
+	"bytes"
 	"hash/fnv"
 )
 
@@ -22,7 +23,7 @@ func NewDatabase(dbName string) *Database {
 func (d *Database) Get(key string) (error, string)  {
 	from, to := d.getRangeBufferByKey(key)
 	err, buffer := d.fileManager.Read(from, to)
-	return err, string(buffer)
+	return err, string(bytes.Trim(buffer, "\u0000"))
 }
 
 func (d *Database) Set(key string, value string) error {
