@@ -37,5 +37,5 @@ Process finished with exit code 0
 - [X] Set operation
 - [X] Get operation
 - [X] Delete operation
-- [] Thread-safe
-- [] Server
+- [ ] Thread-safe
+- [ ] Server
