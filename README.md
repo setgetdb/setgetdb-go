@@ -39,9 +39,10 @@ $ curl -X POST --data '{ "key": "hello" }' http://localhost:10101/delete
 ```
 goos: darwin
 goarch: amd64
-pkg: github.com/setget/setget/tests
-BenchmarkSetDifferentValues-8   	   20000	     80098 ns/op
-BenchmarkSetDifferentKeys-8     	   20000	     97435 ns/op
+pkg: github.com/setgetdb/setgetdb/tests
+BenchmarkSetDifferentValues-8   	   20000	     79983 ns/op
+BenchmarkGetSameValues-8        	20000000	        67.5 ns/op
+BenchmarkSetDifferentKeys-8     	   20000	    144688 ns/op
 PASS
 
 Process finished with exit code 0
@@ -52,5 +53,7 @@ Process finished with exit code 0
 - [X] Get operation
 - [X] Delete operation
 - [X] Server
-- [ ] Cache layer
+- [X] Cache layer
 - [ ] Thread-safe
+- [ ] Cache LRU strategy
+

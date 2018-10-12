@@ -17,7 +17,6 @@ type keyValue struct {
 	Value string `json:"value"`
 }
 
-
 func getenv(key, fallback string) string {
 	value := os.Getenv(key)
 	if len(value) == 0 {
@@ -27,9 +26,10 @@ func getenv(key, fallback string) string {
 }
 
 func main() {
+	prefixPath := getenv("PREFIX_PATH", "./")
 	dbName := getenv("DB_NAME", "DATABASE")
 	port := getenv("PORT", "10101")
-	db := NewDatabase(dbName)
+	db := NewDatabase(prefixPath, dbName)
 	server := ServerSetGetDb{db}
 	http.HandleFunc("/set", server.Set)
 	http.HandleFunc("/get", server.Get)
