@@ -1,6 +1,7 @@
+# SetGetDB
+
 <img src="./logo.png" width="600" />
 
-# SetGetDB
 A persistent key-value db for educational purposes only.
 
 ## How to build
