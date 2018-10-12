@@ -52,4 +52,5 @@ Process finished with exit code 0
 - [X] Get operation
 - [X] Delete operation
 - [X] Server
+- [ ] Cache layer
 - [ ] Thread-safe
