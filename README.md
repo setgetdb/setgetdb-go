@@ -1,5 +1,5 @@
 # SetGetDB
-A persistent key-value db for educational purposes Only.
+A persistent key-value db for educational purposes only.
 
 ## How to build
 ```sh
