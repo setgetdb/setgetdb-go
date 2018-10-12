@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"gitlab.com/setget/setget/src"
+	"github.com/setget/setget/src"
 	"testing"
 )
 
