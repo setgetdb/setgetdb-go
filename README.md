@@ -17,9 +17,9 @@ db.DeleteByKey(HELLO)
 ## Benchmark
 
 ### Hardware
-Processor: Intel(R) Core(TM) i7-4850HQ CPU @ 2.30GHz
-RAM: 16GB
-Disk: SSD 500GB
+- **Processor**: Intel(R) Core(TM) i7-4850HQ CPU @ 2.30GHz
+- **RAM**: 16GB
+- **Disk**: SSD 500GB
 
 ### Results
 ```
