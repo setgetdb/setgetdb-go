@@ -41,9 +41,9 @@ $ curl -X POST --data '{ "key": "hello" }' http://localhost:10101/delete
 goos: darwin
 goarch: amd64
 pkg: github.com/setgetdb/setgetdb/tests
-BenchmarkSetDifferentValues-8   	   20000	     79983 ns/op
-BenchmarkGetSameValues-8        	20000000	        67.5 ns/op
-BenchmarkSetDifferentKeys-8     	   20000	    144688 ns/op
+BenchmarkSetDifferentValues-8   	   20000	     96021 ns/op
+BenchmarkGetSameValues-8        	100000000	        19.2 ns/op
+BenchmarkSetDifferentKeys-8     	   20000	     94102 ns/op
 PASS
 
 Process finished with exit code 0

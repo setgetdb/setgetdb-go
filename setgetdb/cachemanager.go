@@ -1,7 +1,5 @@
 package setgetdb
 
-import "hash/fnv"
-
 const MaxRecordCache = 10000000
 
 type cacheRecord struct {
@@ -10,11 +8,11 @@ type cacheRecord struct {
 }
 
 type CacheManager struct {
-	recordManager *Recordmanager
+	recordManager *RecordManager
 	cache map[uint32]cacheRecord
 }
 
-func NewCacheManager(recordManager *Recordmanager) *CacheManager {
+func NewCacheManager(recordManager *RecordManager) *CacheManager {
 	return &CacheManager{recordManager, make(map[uint32]cacheRecord)}
 }
 
@@ -52,7 +50,9 @@ func (c *CacheManager) Close() error {
 }
 
 func (c *CacheManager) hash(s string) uint32 {
-	h := fnv.New32a()
-	h.Write([]byte(s))
-	return h.Sum32() % MaxRecordCache
+	hash := 0
+	for i := 0; i < len(s); i++ {
+		hash = (101 * hash) + int(s[i])
+	}
+	return uint32(hash) % MaxRecordCache
 }
