@@ -1,5 +1,6 @@
 <img src="./logo.png" width="400" />
-*Gopher image by [Renee French][rf], licensed under [Creative Commons 3.0 Attributions license][cc3-by].*
+
+Gopher image by [Renee French][rf], licensed under [Creative Commons 3.0 Attributions license][cc3-by].
 
 A persistent key-value db for educational purposes only.
 
