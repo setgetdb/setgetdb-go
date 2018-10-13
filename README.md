@@ -61,3 +61,5 @@ Process finished with exit code 0
 - [ ] Thread-safe cachemanager layer
 - [ ] Cache LRU strategy
 
+[rf]: https://reneefrench.blogspot.com/
+[cc3-by]: https://creativecommons.org/licenses/by/3.0/
