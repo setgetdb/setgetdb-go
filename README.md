@@ -56,8 +56,7 @@ Process finished with exit code 0
 - [X] Server
 - [X] Cache layer
 - [X] Thread-safe filemanager layer
-- [ ] Thread-safe cachemanager layer
-- [ ] Cache LRU strategy
+- [X] Thread-safe cachemanager layer
 
 Gopher image by [Renee French][rf], licensed under [Creative Commons 3.0 Attributions license][cc3-by].
 

@@ -17,7 +17,7 @@ func BenchmarkSetDifferentValues(b *testing.B) {
 	}
 }
 
-func BenchmarkGetSameValues(b *testing.B) {
+func BenchmarkGetSameValue(b *testing.B) {
 	db := NewDatabase(PREFIXPATH, TEST)
 	db.Set(HELLO, WORLD)
 	for n := 0; n < b.N; n++ {
